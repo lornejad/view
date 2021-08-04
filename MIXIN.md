@@ -22,5 +22,15 @@
   * ترکیب مورد اول و دوم 
 * `has_perm`(perm ,obj=None)** :
   * به جای perm میتوان یک مجوز یا لیستی از مجوز ها را به ان داد و با توجه به مجوز های user یک boolean برمیگرداند . 
+  
+  * ساخت perm : 
+  
+    * ```
+      permission = Permission.objects.create(
+          codename='can_publish',
+          name='Can Publish Posts',
+          content_type=content_type,
+      )
+      ```
 * `has_module_perms`**(***package_name***)** :
 * اگر user کلا مجوزی تو این پکیج داشته باشد true برمیگرداند . 
